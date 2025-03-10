@@ -1,4 +1,9 @@
 /* ini file css */
+* {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;
