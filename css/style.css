@@ -1,6 +1,7 @@
 * {
   overflow: auto;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 /* header start */
@@ -8,12 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #fff;
-  padding: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .main-logo {
@@ -72,6 +67,19 @@ hr {
   height: 500px;
   display: block;
   object-fit: cover;
+}
+
+.img-btn {
+  margin-top: 4px;
+  background-color: #0a5eb0;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .profile-content,
