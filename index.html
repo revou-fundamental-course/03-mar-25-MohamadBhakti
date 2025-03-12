@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Portofolio Bhakti</title>
   </head>
   <body>
@@ -39,8 +45,10 @@
           <img class="img-slide" src="assets/img4.jpg" />
           <img class="img-slide" src="assets/img5.jpg" />
         </div>
-        <button class="img-btn" onclick="plusDivs(1)">Next</button>
-        <button class="img-btn" onclick="plusDivs(-1)">Previous</button>
+        <div class="btn-container">
+          <button class="img-btn" onclick="plusDivs(1)">&lt;</button>
+          <button class="img-btn" onclick="plusDivs(-1)">&gt;</button>
+        </div>
       </section>
 
       <!-- our profile konten -->
@@ -58,7 +66,7 @@
               vehicula, magna nec gravida venenatis, ligula odio efficitur
               ligula, et sodales libero lacus eget nunc. Maecenas sit amet nibh
               lacus. Ut pharetra sapien vel orci volutpat, ac lacinia nunc
-              condimentum. <br />
+              condimentum. <br /><br />
               Nullam venenatis odio vel metus interdum, at posuere ligula
               elementum. Fusce non ex id risus viverra gravida id vitae purus.
               Phasellus lacinia augue ut arcu lobortis, non eleifend orci

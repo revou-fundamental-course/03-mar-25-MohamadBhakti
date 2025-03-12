@@ -2,6 +2,7 @@
   overflow: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -33,7 +34,7 @@ nav {
   display: flex;
   font-size: 16px;
   font-weight: bold;
-  gap: 5px;
+  gap: 3px;
 }
 
 nav > a {
@@ -80,17 +81,27 @@ hr {
   -o-border-radius: 10px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .img-btn {
-  margin-top: 4px;
-  background-color: #0a5eb0;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
   border: none;
-  padding: 5px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.img-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* profile */
@@ -131,7 +142,7 @@ hr {
 }
 
 .profile-content p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   text-align: justify;
   /* margin-bottom: 10px; */
@@ -279,6 +290,7 @@ footer {
 
   .nav-menu {
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
