@@ -4,6 +4,11 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #fff;
+  margin: 10px;
+}
+
 /* header start */
 .main-header {
   display: flex;
@@ -65,9 +70,14 @@ hr {
 
 .img-slide {
   width: 100%;
-  height: 500px;
+  height: 600px;
   display: block;
   object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .img-btn {
@@ -91,7 +101,13 @@ hr {
   padding: 20px;
   margin: 20px 0;
   gap: 20px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e3f4f4;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .profile-image {
@@ -126,7 +142,9 @@ hr {
   padding: 20px;
   margin: 20px 0;
   height: 500px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e3f4f4;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .achievement-section h2 {
@@ -170,18 +188,17 @@ hr {
   width: 45%;
   margin: 20px;
   background-color: #f9f9f9;
-  border: 1px solid #ccf;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#message-container {
+#message {
   width: 100%;
   margin: 20px auto;
   text-align: left;
 }
 
-#message-container h1 {
+#message h1 {
   text-align: left;
   font-size: 24px;
   margin-bottom: 20px;
@@ -193,7 +210,9 @@ hr {
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e3f4f4;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .message-form,
@@ -201,9 +220,7 @@ hr {
   flex: 1;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ccf;
   border-radius: 5px;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
