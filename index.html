@@ -10,31 +10,43 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Portofolio Bhakti</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>My Website</title>
   </head>
   <body>
     <!-- main header -->
     <header class="main-header">
-      <!-- logo -->
-      <div class="main-logo"></div>
+      <div class="main-logo">
+        <h1>MySchool</h1>
+      </div>
 
-      <!-- navbar menu -->
       <nav class="nav-menu">
         <a href="#home">Home</a>
         <a href="#profile">Our Profile</a>
-        <a href="#achievment">Achievment</a>
+        <a href="#achievement">Achievment</a>
         <a href="#message">Message Us</a>
+        <a href="#contact">Contact Us</a>
       </nav>
     </header>
-
-    <hr />
 
     <!-- main content -->
     <main>
       <!-- home konten -->
       <section id="home">
+        <div id="namePopup" class="popup">
+          <div class="popup-content">
+            <h3>Enter Your Name</h3>
+            <input type="text" id="nameInput" placeholder="Your name here" />
+            <button id="submitName">OK</button>
+          </div>
+        </div>
+
+        <!-- Header -->
         <header>
-          <h1>Hi <span id="name">-</span>, Welcome to My Portofolio</h1>
+          <h1>Hi <span id="typedName"></span>, Welcome to MySchool Website</h1>
         </header>
 
         <!-- banner img -->
@@ -45,9 +57,37 @@
           <img class="img-slide" src="assets/img4.jpg" />
           <img class="img-slide" src="assets/img5.jpg" />
         </div>
-        <div class="btn-container">
-          <button class="img-btn" onclick="plusDivs(1)">&lt;</button>
-          <button class="img-btn" onclick="plusDivs(-1)">&gt;</button>
+
+        <!-- CTA Button -->
+        <div class="cta-container">
+          <button class="cta-button" onclick="scrollToProfile()">
+            Explore Now
+          </button>
+        </div>
+
+        <!-- Deskripsi Sekolah -->
+        <div class="school-info">
+          <p>
+            At MySchool, we provide excellent education with a focus on
+            creativity, innovation, and technology integration. Join us in
+            shaping the future.
+          </p>
+        </div>
+      </section>
+
+      <!-- testimonial slider -->
+      <section id="testimonial">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-slide">
+            "MySchool changed my life!" - Student A
+          </div>
+          <div class="testimonial-slide">
+            "The teachers here are amazing!" - Student B
+          </div>
+          <div class="testimonial-slide">
+            "I love learning with the latest technology!" - Student C
+          </div>
         </div>
       </section>
 
@@ -55,62 +95,128 @@
       <section id="profile">
         <h1>Our Profile</h1>
 
-        <div class="profile-section">
-          <div class="profile-image">
-            <img src="assets/profile.jpg" alt="Profile Image" />
+        <!-- Slider container -->
+        <div class="slider">
+          <!-- Slide 1: About Us -->
+          <div class="slide active" id="about-us-slide">
+            <div class="about-us-content">
+              <h2>About Us</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                vehicula, magna nec gravida venenatis, ligula odio efficitur
+                ligula, et sodales libero lacus eget nunc. Maecenas sit amet
+                nibh lacus. Ut pharetra sapien vel orci volutpat, ac lacinia
+                nunc condimentum.
+              </p>
+            </div>
+            <div class="about-us-image">
+              <img src="assets/about.jpg" alt="About Us Image" />
+            </div>
           </div>
-          <div class="profile-content">
-            <h2>Our Profile</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              vehicula, magna nec gravida venenatis, ligula odio efficitur
-              ligula, et sodales libero lacus eget nunc. Maecenas sit amet nibh
-              lacus. Ut pharetra sapien vel orci volutpat, ac lacinia nunc
-              condimentum. <br /><br />
-              Nullam venenatis odio vel metus interdum, at posuere ligula
-              elementum. Fusce non ex id risus viverra gravida id vitae purus.
-              Phasellus lacinia augue ut arcu lobortis, non eleifend orci
-              vulputate. Sed aliquam felis et elit bibendum, vel bibendum est
-              consequat.
-            </p>
+
+          <!-- Slide 2: Visi & Misi -->
+          <div class="slide" id="visi-misi-slide">
+            <div class="profile-image">
+              <img src="assets/school.jpg" alt="Visi Misi Image" />
+            </div>
+            <div class="profile-content">
+              <!-- Kotak Visi -->
+              <div class="vision-box">
+                <h2>Visi</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  vehicula, magna nec gravida venenatis, ligula odio efficitur
+                  ligula, et sodales libero lacus eget nunc. Maecenas sit amet
+                  nibh lacus. Ut pharetra sapien vel orci volutpat, ac lacinia
+                  nunc condimentum.
+                </p>
+              </div>
+              <!-- Kotak Misi -->
+              <div class="mission-box">
+                <h2>Misi</h2>
+                <p>
+                  Nullam venenatis odio vel metus interdum, at posuere ligula
+                  elementum. Fusce non ex id risus viverra gravida id vitae
+                  purus. Phasellus lacinia augue ut arcu lobortis, non eleifend
+                  orci vulputate. Sed aliquam felis et elit bibendum, vel
+                  bibendum est consequat.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="slider-nav">
+          <button class="nav-btn" onclick="showSlide('about-us-slide')">
+            About Us
+          </button>
+          <button class="nav-btn" onclick="showSlide('visi-misi-slide')">
+            Visi & Misi
+          </button>
         </div>
       </section>
 
       <!-- achiev konten -->
-      <section id="achievment">
-        <h1>Achievment</h1>
-
+      <section class="achievement-wrapper" id="achievement">
+        <h1 class="section-title">Our Achievement</h1>
         <div class="achievement-section">
-          <h2>Our Achievement</h2>
-          <div class="achievements">
-            <div class="achievement-item">
-              <h3>Best Developer Award</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur eum quidem beatae explicabo quas incidunt!
-              </p>
-            </div>
-            <div class="achievement-item">
-              <h3>Best Developer Award</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-                repudiandae, aut earum aspernatur voluptatum maxime.
-              </p>
-            </div>
-            <div class="achievement-item">
-              <h3>Best Developer Award</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-                voluptas tempora unde! Ullam, cum dicta.
-              </p>
-            </div>
-            <div class="achievement-item">
-              <h3>Best Developer Award</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Debitis non saepe quis iusto enim adipisci!
-              </p>
+          <div class="achievement-content">
+            <h2>About Our Achievements</h2>
+            <p class="p-content-achievement">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              vehicula, magna nec gravida venenatis, ligula odio efficitur
+              ligula, et sodales libero lacus eget nunc. Maecenas sit amet nibh
+              lacus. Ut pharetra sapien vel orci volutpat, ac lacinia nunc
+              condimentum.
+            </p>
+
+            <!-- Achievement Cards -->
+            <div class="achievement-content-full-width">
+              <div class="achievement-container">
+                <div class="achievement-card">
+                  <h2>Top Academic Excellence</h2>
+                  <p>
+                    Achieved the highest academic performance in the region with
+                    a consistent track record of excellence.
+                  </p>
+                </div>
+                <div class="achievement-card">
+                  <h2>Best Extracurricular Program</h2>
+                  <p>
+                    Recognized for the most outstanding extracurricular
+                    activities in arts, sports, and technology.
+                  </p>
+                </div>
+                <div class="achievement-card">
+                  <h2>National Science Olympiad Champion</h2>
+                  <p>
+                    Our students won first place in the National Science
+                    Olympiad for three consecutive years.
+                  </p>
+                </div>
+                <div class="achievement-card">
+                  <h2>Best Innovation Award</h2>
+                  <p>
+                    Recognized for innovative projects that bring practical
+                    solutions to local and global challenges.
+                  </p>
+                </div>
+                <div class="achievement-card">
+                  <h2>Green School Award</h2>
+                  <p>
+                    Awarded for commitment to environmental sustainability and
+                    eco-friendly school practices.
+                  </p>
+                </div>
+                <div class="achievement-card">
+                  <h2>Leadership and Social Impact</h2>
+                  <p>
+                    Recognized for leadership in community service and impactful
+                    social programs.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -155,11 +261,24 @@
       </section>
     </main>
 
-    <hr />
-
     <!-- main footer -->
-    <footer>
-      <p>&copy;2025 Portofolio Mohamad Bhakti</p>
+    <footer class="footer-container" id="contact">
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <div class="footer-content">
+          <div class="footer-left">
+            <i class="fas fa-envelope"></i> myschool@gmail.com <br />
+            <i class="fab fa-twitter"></i> @myschool
+          </div>
+          <div class="footer-right">
+            <i class="fab fa-instagram"></i> @myschool <br />
+            <i class="fab fa-whatsapp"></i> +1234567890
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © 2025 MySchool | Created By Mohamad Bhakti
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
